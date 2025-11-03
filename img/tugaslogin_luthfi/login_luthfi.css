@@ -1,0 +1,33 @@
+body {background-color: chocolate;
+}
+
+.card_login{
+    background-color: azure;
+    width: 400px;
+    height: auto;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+} 
+ .Login_Mancing{
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-weight: bold;
+
+}
+
+.ket_daftar{
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    margin-top: 10px;
+}
+
+

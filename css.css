@@ -1,0 +1,18 @@
+body{
+    background-color: aqua;
+}
+
+.teks-putih{
+    color: hotpink;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif,
+    'Courier New',Courier, monospace;
+    font-style: italic;
+    text-align: center;
+    font-size: 100px;
+    text-decoration: underline;
+
+}#teksputih{
+    color: darkviolet;
+    text-align: center;
+    font-size: 50px;
+}

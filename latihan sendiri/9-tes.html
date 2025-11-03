@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lingkaran Interaktif di Belakang Cursor</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background-color: #6b705c;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  /* Lingkaran cursor */
+  .circle {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #c0c0c0;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all 6s ease;
+  }
+
+  /* Objek yang akan disentuh */
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #a5a58d;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .box:hover {
+    background-color: #b7b7a4;
+    transform: scale(1.1);
+  }
+</style>
+</head>
+<body>
+
+<div class="circle"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+<script>
+  const circle = document.querySelector('.circle');
+  const boxes = document.querySelectorAll('.box');
+
+  document.addEventListener('mousemove', (e) => {
+    circle.style.left = `${e.clientX}px`;
+    circle.style.top = `${e.clientY}px`;
+  });
+
+  // Saat lingkaran menyentuh objek (hover)
+  boxes.forEach(box => {
+    box.addEventListener('mouseenter', () => {
+      circle.style.transform = 'translate(-50%, -50%) scale(1.5)';
+      circle.style.borderColor = '#ffb703';
+      circle.style.opacity = '1';
+    });
+
+    box.addEventListener('mouseleave', () => {
+      circle.style.transform = 'translate(-50%, -50%) scale(1)';
+      circle.style.borderColor = '#c0c0c0';
+      circle.style.opacity = '0.7';
+    });
+  });
+</script>
+
+</body>
+</html>
